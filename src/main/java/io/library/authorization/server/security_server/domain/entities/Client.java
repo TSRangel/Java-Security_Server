@@ -1,0 +1,28 @@
+package io.library.authorization.server.security_server.domain.entities;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.experimental.SuperBuilder;
+
+import java.util.UUID;
+
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@SuperBuilder
+@Table(name = "tb_client")
+public class Client extends BaseEntity{
+    @Column(nullable = false)
+    private String clientId;
+    @Column(nullable = false)
+    private String clientSecret;
+    @Column(nullable = false)
+    private String redirectUri;
+    @Column(nullable = false)
+    private String scope;
+}
