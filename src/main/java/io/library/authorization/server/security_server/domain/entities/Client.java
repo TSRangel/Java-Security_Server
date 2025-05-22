@@ -17,7 +17,7 @@ import java.util.UUID;
 @SuperBuilder
 @Table(name = "tb_client")
 public class Client extends BaseEntity{
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String clientId;
     @Column(nullable = false)
     private String clientSecret;
