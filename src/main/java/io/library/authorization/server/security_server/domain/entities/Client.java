@@ -8,8 +8,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
-import java.util.UUID;
-
 @Entity
 @Getter
 @Setter
@@ -21,8 +19,8 @@ public class Client extends BaseEntity{
     private String clientId;
     @Column(nullable = false)
     private String clientSecret;
-    @Column(nullable = false)
-    private String redirectUri;
+    @Column(nullable = false, name = "redirect_uri")
+    private String redirectURI;
     @Column(nullable = false)
     private String scope;
 }
